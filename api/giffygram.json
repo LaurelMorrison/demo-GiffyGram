@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Bryan",
+      "email": "bryan@bn.com",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "imageURL": "https://media.giphy.com/media/26gslLX5AA4mwZU7m/giphy.gif",
+      "userId": 6,
+      "description": "People love pizazz. -Johnny Rose",
+      "timestamp": 1561695022812,
+      "title": "Getting Flexbox to work",
+      "id": 3
+    },
+    {
+      "imageURL": "https://media.giphy.com/media/26gsccje7r5WUrXsA/giphy.gif",
+      "userId": 6,
+      "description": "I'm trying very hard not to connect with people right now. -David Rose",
+      "timestamp": 1561695022812,
+      "title": "When Bryan asks you to do a shortcut",
+      "id": 4
+    },
+    {
+      "imageURL": "https://media.giphy.com/media/26gsitZBRzUgnVcf6/giphy.gif",
+      "userId": 1,
+      "description": "That's exactly the kind of paranoia that makes me weary of spending time with you. - Moira Rose",
+      "timestamp": 1561695022812,
+      "title": "Trying a for/if loop",
+      "id": 5
+    },
+    {
+      "imageURL": "https://media.giphy.com/media/xUPGce1Q9vVEtaAcms/giphy.gif",
+      "userId": 1,
+      "description": "Ew, David. - Alexis Rose",
+      "timestamp": 1561695022812,
+      "title": "Working on CSS",
+      "id": 6
+    }
+  ],
+  "messages": []
+}
