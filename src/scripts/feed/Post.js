@@ -4,6 +4,7 @@ export const Post = (postObject) => {
         <h3>${postObject.title} </h3>
         <img class="postImage" src="${postObject.imageURL}" />
         <p>${postObject.description} </p>
+        <p>${postObject.timestamp = new Date(postObject.timestamp)} </p>
       </section>
     `
   }
