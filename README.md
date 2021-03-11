@@ -4,7 +4,7 @@
 Perhaps you've used other social media platforms that allow users to share beautiful pictures with each other. An opportunity that you've discovered is that none of these platforms specialize in Gif animation images. You went to some angel investors and convinced them that you have a solid business plan and that people around the world have been craving an app for sharing only gifs.
 
 ## Lesson
-Week 4 of class is all about data. We started to build an Entity Relationship Diagram (ERD) , then learned how to use the data in Postman through JavaScript.
+Week 4 of class is all about data. We started to build an Entity Relationship Diagram (ERD), then learned how to use the data in Postman through JavaScript.
 
 ## My Goals
 I wanted to use this project to express my learning experiences through Schitts Creek GIFs. 
