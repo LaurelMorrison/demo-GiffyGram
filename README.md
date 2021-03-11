@@ -14,4 +14,5 @@ Overall, I wanted to learn more about form submissions and how to loop through t
 ## Technologies Used
 ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![GitHub](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/VSCode%20-%23007ACC.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+## Visual
 ![Giffygram](https://user-images.githubusercontent.com/78938657/110830631-6acd1680-8267-11eb-8c9f-5ea026c00a9e.png)
