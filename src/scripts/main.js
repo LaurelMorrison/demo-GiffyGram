@@ -35,6 +35,8 @@ applicationElement.addEventListener("change", event => {
 		//clear the input fields
 	}
   })
+
+  
   
   applicationElement.addEventListener("click", event => {
 	event.preventDefault();
