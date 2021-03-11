@@ -7,6 +7,18 @@ export const getUsers = () => {
     })
 }
 
+const loggedInUser = {
+  id: 1,
+  name: "Bryan",
+  email: "bryan@bn.com"
+}
+
+export const getLoggedInUser = () => {
+  return {...loggedInUser};
+}
+
+
+
 let postCollection = [];
 
 export const usePostCollection = () => {
@@ -25,3 +37,14 @@ export const getPosts = () => {
 }
 
 
+export const createPost = postObj => {
+  return fetch("http://localhost:8088/posts", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(postObj)
+
+  })
+      .then(response => response.json())
+}

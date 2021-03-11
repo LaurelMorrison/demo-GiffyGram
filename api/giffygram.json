@@ -4,6 +4,16 @@
       "name": "Bryan",
       "email": "bryan@bn.com",
       "id": 1
+    },
+    {
+      "name": "Brenda",
+      "email": "brenda@bn.com",
+      "id": 2
+    },
+    {
+      "name": "Laurel",
+      "email": "laurel@bn.com",
+      "id": 3
     }
   ],
   "posts": [
@@ -38,6 +48,14 @@
       "timestamp": 1531975003000,
       "title": "Working on CSS",
       "id": 6
+    },
+    {
+      "title": "when the form works",
+      "imageURL": "https://media.giphy.com/media/26gs78HRO8sOuhTkQ/giphy.gif",
+      "description": "",
+      "userId": 1,
+      "timestamp": 1615480677863,
+      "id": 9
     }
   ],
   "messages": []
