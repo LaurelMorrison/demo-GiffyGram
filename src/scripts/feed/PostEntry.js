@@ -1,6 +1,7 @@
 export const PostEntry = () => {
     return `
-    <form class="newPost" id="myForm">
+    <form action="">
+    <fielset id="newPost">
         <div>
             <input value=""
                    name="postTitle"
@@ -22,6 +23,12 @@ export const PostEntry = () => {
 
         <button id="newPost__submit">Save</button>
         <button id="newPost__cancel">Cancel</button>
+        </fieldset>
     </form>
     `
+}
+
+export const clearForm = () =>
+{
+    document.getElementById("newPost").reset();
 }

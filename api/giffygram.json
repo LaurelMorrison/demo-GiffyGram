@@ -18,22 +18,6 @@
   ],
   "posts": [
     {
-      "imageURL": "https://media.giphy.com/media/26gslLX5AA4mwZU7m/giphy.gif",
-      "userId": 6,
-      "description": "People love pizazz. -Johnny Rose",
-      "timestamp": 1615396926000,
-      "title": "Getting Flexbox to work",
-      "id": 3
-    },
-    {
-      "imageURL": "https://media.giphy.com/media/26gsccje7r5WUrXsA/giphy.gif",
-      "userId": 6,
-      "description": "I'm trying very hard not to connect with people right now. -David Rose",
-      "timestamp": 1561695022812,
-      "title": "When Bryan asks you to do a shortcut",
-      "id": 4
-    },
-    {
       "imageURL": "https://media.giphy.com/media/26gsitZBRzUgnVcf6/giphy.gif",
       "userId": 1,
       "description": "That's exactly the kind of paranoia that makes me weary of spending time with you. - Moira Rose",
@@ -56,6 +40,70 @@
       "userId": 1,
       "timestamp": 1615480677863,
       "id": 9
+    },
+    {
+      "title": "when you get delete to work",
+      "imageURL": "https://media.giphy.com/media/xUA7b2zzeFPdRtBMek/giphy.gif",
+      "description": "byeeee",
+      "userId": 1,
+      "timestamp": 1616522542207,
+      "id": 10
+    },
+    {
+      "title": "when the teachers hear modules ",
+      "imageURL": "https://media.giphy.com/media/xT1XGDDusvpE2Hrbfq/giphy.gif",
+      "description": "that's embarrassing",
+      "userId": 1,
+      "timestamp": 1616523179537,
+      "id": 11
+    },
+    {
+      "title": "when you have to edit a post",
+      "imageURL": "https://media.giphy.com/media/26gYOu9Gctb68JSve/giphy.gif",
+      "description": "please no",
+      "userId": 1,
+      "timestamp": 1616523223557,
+      "id": 12
+    },
+    {
+      "title": "when you find an actually helpful coding article",
+      "imageURL": "https://media.giphy.com/media/xUPGcrbcZT7BSnaUNy/giphy.gif",
+      "description": "bingo.",
+      "userId": 1,
+      "timestamp": 1616523271248,
+      "id": 13
+    },
+    {
+      "title": "A morning of trying to figure out loops",
+      "imageURL": "https://media.giphy.com/media/3oKIPdCLpe9erRD0SQ/giphy.gif",
+      "description": "good night.",
+      "userId": 1,
+      "timestamp": 1616523326020,
+      "id": 14
+    },
+    {
+      "title": "Fixing an error (finally)",
+      "imageURL": "https://media.giphy.com/media/l3UcA1HpL5kLuiWOc/giphy.gif",
+      "description": "take that code",
+      "userId": 1,
+      "timestamp": 1616523385120,
+      "id": 15
+    },
+    {
+      "title": "Button works, now it just needs to populate",
+      "imageURL": "https://media.giphy.com/media/yNOZs5wjpSnVRrMKHy/giphy.gif",
+      "description": "please populate",
+      "userId": 1,
+      "timestamp": 1616523451817,
+      "id": 16
+    },
+    {
+      "title": "when the console says an error",
+      "imageURL": "https://media.giphy.com/media/xUA7aV0Qt03RXTHQ76/giphy.gif",
+      "description": "who asked you.",
+      "userId": 1,
+      "timestamp": 1616523622224,
+      "id": 17
     }
   ],
   "messages": []
