@@ -12,24 +12,11 @@ import { RegisterForm } from "./auth/RegisterForm.js";
 import { LoginForm } from "./auth/LoginForm.js";
 import { Post } from "./feed/Post.js";
 
-/* Main logic module for what should happen on initial page load for Giffygram
-*/
-
 const applicationElement = document.querySelector(".giffygram");
 const footerElement = document.querySelector("footer");
 
 
-// applicationElement.addEventListener("click", (event) => {
-// 	console.log('click edit');
-
-// 	if (event.target.id.startsWith("edit")) {
-// 		console.log("post clicked", event.target.id.split("--"));
-// 		console.log("zero index value", event.target.id.split("--")[0]);
-// 		console.log("one index value, the id is", event.target.id.split("--")[1]);
-// 		console.log(event.target.id)
-// 	}
-// })
-
+//filtering the year in footer
 applicationElement.addEventListener("change", event => {
 	if (event.target.id === "yearSelection") {
 		const yearAsNumber = parseInt(event.target.value)
@@ -44,24 +31,20 @@ applicationElement.addEventListener("change", event => {
 export const showEditButton = (Post) => {
 	const LoggedInUser = getLoggedInUser()
 	if (LoggedInUser.id === Post.userId) {
-		console.log(LoggedInUser.id)
-		console.log(Post.userId)
 		return (`<button id="edit__${Post.id}">Edit</button>`)
 	}
 }
 
-applicationElement.addEventListener("click", event => {
-	if (event.target.id === "newPost__cancel") {
-		//clear the input fields
-		// then(response => {
-		// 	console.log("clear fields", response)
-		// 	showPostList();
-		//   })
+//Only show delete button for active user's posts
+export const showDeleteButton = (Post) => {
+	const LoggedInUser = getLoggedInUser()
+	if (LoggedInUser.id === Post.userId) {
+		return (`<button id="delete__${Post.id}">Delete</button>`)
 	}
-})
+}
 
 
-
+//posting new posts from form and importing the data manager
 applicationElement.addEventListener("click", event => {
 	event.preventDefault();
 	if (event.target.id === "newPost__submit") {
@@ -78,7 +61,7 @@ applicationElement.addEventListener("click", event => {
 			userId: getLoggedInUser().id,
 			timestamp: Date.now()
 		}
-
+		showPostEntry();
 		// be sure to import from the DataManager
 		createPost(postObject)
 			.then(response => {
@@ -89,7 +72,7 @@ applicationElement.addEventListener("click", event => {
 	}
 })
 
-
+//Delete post button
 applicationElement.addEventListener("click", event => {
 	event.preventDefault();
 	if (event.target.id.startsWith("delete")) {
@@ -101,6 +84,7 @@ applicationElement.addEventListener("click", event => {
 	}
 })
 
+//Filtering post by year
 const showFilteredPosts = (year) => {
 	//get a copy of the post collection
 	const epoch = Date.parse(`01/01/${year}`);
@@ -114,6 +98,7 @@ const showFilteredPosts = (year) => {
 	postElement.innerHTML = PostList(filteredData);
 }
 
+//Populating post list
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
@@ -121,6 +106,7 @@ const showPostList = () => {
 	})
 }
 
+//Nav bar function
 const showNavBar = () => {
 	//Get a reference to the location on the DOM where the nav will display
 	const navElement = document.querySelector("nav");
@@ -243,7 +229,7 @@ applicationElement.addEventListener("click", event => {
 	}
 })
 
-
+//Getting register form to function
 applicationElement.addEventListener("click", event => {
 	event.preventDefault();
 	if (event.target.id === "register__submit") {
@@ -260,6 +246,7 @@ applicationElement.addEventListener("click", event => {
 	}
 })
 
+//Logout button function
 applicationElement.addEventListener("click", event => {
 	if (event.target.id === "logout") {
 		logoutUser();
@@ -270,16 +257,11 @@ applicationElement.addEventListener("click", event => {
 })
 
 
-/*
-  This function performs one, specific task.
-  1. Can you explain what that task is?
-  2. Are you defining the function here or invoking it?
-*/
+//Invoking functions
 const startGiffyGram = () => {
 	showNavBar();
 	showPostEntry()
 	showPostList();
 	showFooter();
 }
-// Are you defining the function here or invoking it?
 checkForUser();

@@ -1,9 +1,9 @@
-import { showEditButton } from "../main.js"
+import { showEditButton, showDeleteButton } from "../main.js"
 
 
 export const Post = (postObject) => {
   const editButton = showEditButton(postObject)
-  console.log(editButton)
+  const deleteButton = showDeleteButton(postObject)
     return `
       <section class="post">
         <h3>${postObject.title} </h3>
@@ -12,7 +12,7 @@ export const Post = (postObject) => {
         <p>Posted by: ${postObject.user.name}</p>
         <p>${postObject.timestamp = new Date(postObject.timestamp)} </p>
         ${editButton?editButton:""}
-        <button id="delete__${postObject.id}">Delete</button>
+        ${deleteButton?deleteButton:""}
       </section>
     `
   }
