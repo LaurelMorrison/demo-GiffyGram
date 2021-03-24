@@ -4,9 +4,7 @@ import { NavBar } from "../nav/NavBar.js";
 import { Footer } from "../nav/Footer.js";
 import { PostEntry } from "./feed/PostEntry.js";
 import { PostEdit } from "./feed/PostEdit.js";
-/**
- * Main logic module for what should happen on initial page load for Giffygram
- */
+
 
 const applicationElement = document.querySelector(".giffygram");
 const footerElement = document.querySelector("footer");
@@ -38,7 +36,7 @@ applicationElement.addEventListener("change", event => {
   })
 
   
-  
+//Submitting a new post and making it a post object  
   applicationElement.addEventListener("click", event => {
 	event.preventDefault();
 	if (event.target.id === "newPost__submit") {
@@ -65,7 +63,7 @@ applicationElement.addEventListener("change", event => {
 	}
   })
 
-
+// Deleting posts
   applicationElement.addEventListener("click", event => {
 	event.preventDefault();
 	if (event.target.id.startsWith("delete")) {
@@ -76,7 +74,8 @@ applicationElement.addEventListener("change", event => {
 		})
 	}
   })
-  
+
+//Sorting posts by year
   const showFilteredPosts = (year) => {
 	//get a copy of the post collection
 	const epoch = Date.parse(`01/01/${year}`);
@@ -90,6 +89,7 @@ applicationElement.addEventListener("change", event => {
 	postElement.innerHTML = PostList(filteredData);
   }
 
+//Show post year by latest post
 const showPostList = () => {
 	const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
@@ -97,35 +97,35 @@ const showPostList = () => {
 	})
 }
 
+//Show NavBar
 const showNavBar = () => {
 	//Get a reference to the location on the DOM where the nav will display
 	const navElement = document.querySelector("nav");
 	navElement.innerHTML = NavBar();
 }
+
+//Show Footer
 const showFooter = () => {
 	//Get a reference to the location on the DOM where the footer will display
 	const footerElement = document.querySelector("footer");
 	footerElement.innerHTML = Footer();
 }
 
+//Populating post entry from form
 const showPostEntry = () => { 
 	//Get a reference to the location on the DOM where the nav will display
 	const entryElement = document.querySelector(".entryForm");
 	entryElement.innerHTML = PostEntry();
   }
 
-/*
-	This function performs one, specific task.
-	1. Can you explain what that task is?
-	2. Are you defining the function here or invoking it?
-*/
+//Invoking the functions
 const startGiffyGram = () => {
 	showNavBar();
 	showPostEntry()
 	showPostList();
 	showFooter();
 }
-// Are you defining the function here or invoking it?
+// Invoking GiffyGram
 startGiffyGram();
 
 applicationElement.addEventListener("click", event => {
