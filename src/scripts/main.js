@@ -270,7 +270,9 @@ applicationElement.addEventListener("click", event => {
 		  showPostList();
 		})
 	}
-  })
+	else if (event.target.id === "newPost__cancel")
+		showPostEntry();
+})
 
   // Users function to reference dom where they will display 
 const showUsersPosts = () => {
