@@ -14,6 +14,21 @@
       "name": "Laurel",
       "email": "laurel@bn.com",
       "id": 3
+    },
+    {
+      "name": "yoyo",
+      "email": "duck@goose.com",
+      "id": 4
+    },
+    {
+      "name": "Bo",
+      "email": "bobo@bobo.com",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 6
     }
   ],
   "posts": [
@@ -37,7 +52,7 @@
       "title": "when the form works",
       "imageURL": "https://media.giphy.com/media/26gs78HRO8sOuhTkQ/giphy.gif",
       "description": "",
-      "userId": 1,
+      "userId": 2,
       "timestamp": 1615480677863,
       "id": 9
     },
@@ -61,7 +76,7 @@
       "title": "when you have to edit a post",
       "imageURL": "https://media.giphy.com/media/26gYOu9Gctb68JSve/giphy.gif",
       "description": "please no",
-      "userId": 1,
+      "userId": 3,
       "timestamp": 1616523223557,
       "id": 12
     },
@@ -85,7 +100,7 @@
       "title": "Fixing an error (finally)",
       "imageURL": "https://media.giphy.com/media/l3UcA1HpL5kLuiWOc/giphy.gif",
       "description": "take that code",
-      "userId": 1,
+      "userId": 2,
       "timestamp": 1616523385120,
       "id": 15
     },
@@ -101,10 +116,88 @@
       "title": "when the console says an error",
       "imageURL": "https://media.giphy.com/media/xUA7aV0Qt03RXTHQ76/giphy.gif",
       "description": "who asked you.",
-      "userId": 1,
+      "userId": 3,
       "timestamp": 1616523622224,
       "id": 17
+    },
+    {
+      "title": "Getting login to work",
+      "imageURL": "https://media.giphy.com/media/l0JMmfhjQdeh7QSmA/giphy.gif",
+      "description": "CHEERS",
+      "userId": 4,
+      "timestamp": 1616601135129,
+      "id": 18
+    },
+    {
+      "title": "Generating user specific buttons",
+      "imageURL": "https://media.giphy.com/media/3og0IJgyj4hijAEyk0/giphy.gif",
+      "description": "well here we are.",
+      "userId": 5,
+      "timestamp": 1616613691942,
+      "id": 19
     }
   ],
-  "messages": []
+  "messages": [],
+  "userLikes": [
+    {
+      "postId": "6",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "postId": "17",
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "postId": "17",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "postId": "16",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "postId": "12",
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 12
+    }
+  ]
 }

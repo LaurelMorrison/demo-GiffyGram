@@ -7,16 +7,16 @@ export const getUsers = () => {
     })
 }
 
-const loggedInUser = {
-  id: 1,
-  name: "Bryan",
-  email: "bryan@bn.com"
-}
+let loggedInUser = {}
+
 
 export const getLoggedInUser = () => {
   return {...loggedInUser};
 }
 
+export const logoutUser = () => {
+  loggedInUser = {}
+}
 
 
 let postCollection = [];
@@ -27,10 +27,13 @@ export const usePostCollection = () => {
   //The spread operator makes this quick work
   return [...postCollection];
 }
+
 export const getPosts = () => {
-  return fetch("http://localhost:8088/posts")
+  const userId = getLoggedInUser().id
+  return fetch(`http://localhost:8088/posts?_expand=user`)
     .then(response => response.json())
     .then(parsedResponse => {
+      console.log("data with user", parsedResponse)
       postCollection = parsedResponse
       return parsedResponse;
     })
@@ -81,4 +84,69 @@ export const updatePost = postObj => {
   })
       .then(response => response.json())
       .then(getPosts)
+}
+
+export const setLoggedInUser = (userObj) => {
+  loggedInUser = userObj;
+}
+
+export const loginUser = (userObj) => {
+  return fetch(`http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`)
+  .then(response => response.json())
+  .then(parsedUser => {
+    //is there a user?
+    console.log("parsedUser", parsedUser) //data is returned as an array
+    if (parsedUser.length > 0){
+      setLoggedInUser(parsedUser[0]);
+      return getLoggedInUser();
+    }else {
+      //no user
+      return false;
+    }
+  })
+}
+
+export const registerUser = (userObj) => {
+  return fetch(`http://localhost:8088/users`, {
+    method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userObj)
+  })
+  .then(response => response.json())
+  .then(parsedUser => {
+    setLoggedInUser(parsedUser);
+    return getLoggedInUser();
+  })
+}
+
+export const getLikes = (postId) => {
+  return fetch(`http://localhost:8088/userLikes?postId=${postId}`)
+    .then(response => response.json())
+}
+
+export const postLike = likeObject => {
+  return fetch(`http://localhost:8088/userLikes/`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(likeObject)
+  })
+      .then(response => response.json())
+      .then(getPosts)
+}
+
+// fetch for post data with userId and expand user 
+export const getUsersPosts = () => {
+  const userId = getLoggedInUser().id
+  return fetch(`http://localhost:8088/posts?userId=${userId}&_expand=user`)
+
+    .then(response => response.json())
+    .then(parsedResponse => {
+      console.log(parsedResponse)
+      postCollection = parsedResponse
+      return parsedResponse;
+    })
 }
