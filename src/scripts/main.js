@@ -1,7 +1,8 @@
 import {
 	getUsers, getPosts, usePostCollection, getLoggedInUser,
 	createPost, deletePost, updatePost, getSinglePost,
-	logoutUser, setLoggedInUser, loginUser, registerUser
+	logoutUser, setLoggedInUser, loginUser, registerUser,
+	postLike, getUsersPosts
 } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "../nav/NavBar.js";
@@ -255,6 +256,55 @@ applicationElement.addEventListener("click", event => {
 		checkForUser();
 	}
 })
+
+//Adding like button to post
+applicationElement.addEventListener("click", event => {
+	event.preventDefault();
+	if (event.target.id.startsWith("like")) {
+	  const likeObject = {
+		 postId: event.target.id.split("__")[1],
+		 userId: getLoggedInUser().id
+	  }
+	  postLike(likeObject)
+		.then(response => {
+		  showPostList();
+		})
+	}
+	else if (event.target.id === "newPost__cancel")
+		showPostEntry();
+})
+
+  // Users function to reference dom where they will display 
+const showUsersPosts = () => {
+	const postElement = document.querySelector(".postList");
+	getUsersPosts().then((allPosts) => {
+	  postElement.innerHTML = PostList(allPosts)
+	})
+  }
+  
+  // Filter posts by Users 
+  applicationElement.addEventListener("click", event => {
+	event.preventDefault();
+	if (event.target.id.startsWith("filter")) {
+	  getUsersPosts()
+		.then(response => {
+		  showUsersPosts(response);
+		})
+	}
+  })
+
+
+  // See all posts event listener 
+  applicationElement.addEventListener("click", event => {
+	event.preventDefault();
+	if (event.target.id.startsWith("allPosts")) {
+	  getPosts()
+		.then(response => {
+		  showPostList(response);
+		})
+	}
+  })
+
 
 
 //Invoking functions

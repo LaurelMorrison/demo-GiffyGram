@@ -18,13 +18,15 @@ export const PostEntry = () => {
         </div>
 
         <textarea name="postDescription"
-            class="newPost__input newPost__description"
+            class="newPost__description"
             placeholder="Story behind your gif..."></textarea>
-
+        <div>
         <button id="newPost__submit">Save</button>
         <button id="newPost__cancel">Cancel</button>
+        </div>
         </fieldset>
     </form>
+    
     `
 }
 

@@ -120,3 +120,33 @@ export const registerUser = (userObj) => {
     return getLoggedInUser();
   })
 }
+
+export const getLikes = (postId) => {
+  return fetch(`http://localhost:8088/userLikes?postId=${postId}`)
+    .then(response => response.json())
+}
+
+export const postLike = likeObject => {
+  return fetch(`http://localhost:8088/userLikes/`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(likeObject)
+  })
+      .then(response => response.json())
+      .then(getPosts)
+}
+
+// fetch for post data with userId and expand user 
+export const getUsersPosts = () => {
+  const userId = getLoggedInUser().id
+  return fetch(`http://localhost:8088/posts?userId=${userId}&_expand=user`)
+
+    .then(response => response.json())
+    .then(parsedResponse => {
+      console.log(parsedResponse)
+      postCollection = parsedResponse
+      return parsedResponse;
+    })
+}

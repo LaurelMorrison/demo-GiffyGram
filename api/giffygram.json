@@ -132,5 +132,67 @@
       "id": 19
     }
   ],
-  "messages": []
+  "messages": [],
+  "userLikes": [
+    {
+      "postId": "6",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "postId": "17",
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "postId": "17",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "postId": "16",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "postId": "12",
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "postId": "19",
+      "userId": 3,
+      "id": 12
+    }
+  ]
 }

@@ -17,7 +17,6 @@ export const LoginForm = () => {
 					type="text"
 					placeholder="name@place.com" />
 			</div>
-
 			<button id="login__submit">Login</button>
 			<button id="login__cancel">Cancel</button>
 		</div>

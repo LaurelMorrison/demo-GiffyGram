@@ -1,4 +1,14 @@
-import { showEditButton, showDeleteButton } from "../main.js"
+import { showEditButton, showDeleteButton } from "../main.js";
+import { getLikes } from "../data/DataManager.js";
+
+
+//this needs to be located above the Post declaration
+const getNumberOfLikes = (postId) => {
+  getLikes(postId)
+  .then(response => {
+    document.querySelector(`#likes__${postId}`).innerHTML = `👍 ${response.length}`;
+  })
+}
 
 
 export const Post = (postObject) => {
@@ -13,10 +23,12 @@ export const Post = (postObject) => {
         <p>${postObject.timestamp = new Date(postObject.timestamp)} </p>
         ${editButton?editButton:""}
         ${deleteButton?deleteButton:""}
+        <button id="like__${postObject.id}">Like</button>
+        <p id="likes__${postObject.id}">👍 ${getNumberOfLikes(postObject.id)}</p>
       </section>
     `
   }
 
 
 
-
+ 
