@@ -28,7 +28,3 @@ export const PostEntry = () => {
     `
 }
 
-export const clearForm = () =>
-{
-    document.getElementById("newPost").reset();
-}
